@@ -1,0 +1,15 @@
+name: "COS Builder"
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the depot_tools
+        uses: actions/checkout@v2
+        with:
+          repository: https://chromium.googlesource.com/chromium/tools/depot_tools.git
+          path: depot_tools
