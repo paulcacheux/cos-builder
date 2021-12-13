@@ -14,7 +14,7 @@ jobs:
           echo "${github.workspace}/depot_tools" >> $GITHUB_PATH
 
       - name: Init and sync repo
-        workind-directory: cos-src
+        working-directory: cos-src
         run: |
           repo init -u https://cos.googlesource.com/cos/manifest.git --repo-url https://chromium.googlesource.com/external/repo.git
           repo sync
