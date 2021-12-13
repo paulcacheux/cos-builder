@@ -11,7 +11,7 @@ jobs:
       - name: Checkout the depot_tools
         run: |
           git clone --depth 1 https://chromium.googlesource.com/chromium/tools/depot_tools.git
-          echo "${github.workspace}/depot_tools" >> $GITHUB_PATH
+          echo "${{ github.workspace }}/depot_tools" >> $GITHUB_PATH
 
       - name: Init and sync repo
         working-directory: cos-src
