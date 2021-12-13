@@ -22,6 +22,7 @@ jobs:
           ls
 
       - name: Chroot and build
+        working-directory: cos-src
         run: |
           cros_sdk --enter
           ls
