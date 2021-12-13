@@ -21,3 +21,8 @@ jobs:
           repo sync
           ls
 
+      - name: Chroot and build
+        run: |
+          cros_sdk --enter
+          ls
+
