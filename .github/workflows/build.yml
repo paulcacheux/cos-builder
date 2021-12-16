@@ -24,6 +24,12 @@ jobs:
       - name: Chroot and build
         working-directory: cos-src
         run: |
-          cros_sdk --enter
+          cros_sdk --enter -- "./build_packages --board=lakitu; ./build_image --board=lakitu base"
           ls
+
+      - name: Archive cos image
+        uses: actions/upload-artifact@v2
+        with:
+          name: cos-image
+          path: cos-src/src/build/images/lakitu/latest/
 
